@@ -103,8 +103,9 @@
 
         .contact-item {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 8px;
+            line-height: 1.6;
         }
 
         .contact-item::before {
@@ -284,11 +285,14 @@
             color: var(--primary);
             font-weight: 500;
             margin-bottom: 5px;
+            overflow-wrap: anywhere;
         }
 
         .pub-meta {
             color: #888;
             font-size: 0.9em;
+            line-height: 1.7;
+            overflow-wrap: anywhere;
         }
 
         .pub-badge {
@@ -332,6 +336,10 @@
             .edu-item {
                 flex-direction: column;
                 gap: 10px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -410,6 +418,9 @@
                         <div class="contact-item">baaltommysu@icloud.com</div>
                         <div class="contact-item">13770317283</div>
                         <div class="contact-item">1988.11.23</div>
+                        <div class="contact-item">意大利都灵理工大学博士</div>
+                        <div class="contact-item">毕业时间 2017.11</div>
+                        <div class="contact-item">浙江大学网络安全实验室硕士研究生产业导师</div>
                     </div>
                 </div>
             </div>
@@ -419,7 +430,7 @@
         <div class="section-card">
             <h2 class="section-title">个人简介</h2>
             <p style="color: #555; line-height: 1.9;">
-                长期从事移动操作系统、可信计算、机密计算、虚拟化与AI安全的架构设计与技术决策。具备从芯片—内核—系统框架—应用—端云协同的系统级安全架构经验，负责关键安全能力的引入评审与架构取舍，相关决策直接影响产品技术路线，覆盖上亿台终端设备及其配套服务。
+                端侧系统安全架构负责人，长期从事移动操作系统、可信计算、机密计算、虚拟化与 AI 安全的架构设计与技术决策。具备从芯片—内核—系统框架—应用—端云协同的系统级安全架构经验，负责关键安全能力的引入评审与架构取舍，相关决策直接影响产品技术路线，覆盖上亿台终端设备及其配套服务。
             </p>
         </div>
 
@@ -461,11 +472,12 @@
                 <div class="exp-role">安全研究专家 / 端侧系统安全架构负责人</div>
                 <div class="exp-desc">
                     <ul>
-                        <li>主导定义vivo设备端侧系统"千镜安全架构"，作为公司端侧业务的系统级安全架构基线，从芯片层、内核层、系统框架层、
-                            应用层到端云协同边界，明确安全边界、威胁模型与演进路线，重点覆盖身份与行为认证、系统与内核完整性、端侧虚拟化隔离、
-                            敏感数据保护、端云协同中的机密计算</li>
-                        <li>主编并发布《千镜安全架构技术白皮书》《vivo安全与隐私保护透明白皮书》《OriginOS安全白皮书》。</li>
-                        <li>申请专利二十余篇，参加高通QPSS、WAIC、ISC、YOCSEF等工业界和学术界会议宣讲。</li>
+                        <li>端侧系统安全架构负责人：主导定义 vivo 设备端侧系统“千镜安全架构”，作为公司端侧业务的系统级安全架构基线，从芯片层、内核层、系统框架层、应用层到端云协同边界，明确安全边界、威胁模型与演进路线，覆盖并保护上亿台 vivo 终端设备及相关服务。</li>
+                        <li>安全技术引入与架构决策：对拟引入的安全能力进行系统性评估与取舍，相关结论直接影响系统架构设计与业务产品技术路线选择。</li>
+                        <li>重点覆盖身份与行为认证、系统与内核完整性、端侧虚拟化隔离、敏感数据保护、端云协同中的机密计算等关键安全边界。</li>
+                        <li>AI &amp; On-device Intelligence Security：将 AI 视为端侧高权限执行与敏感数据处理的新计算单元，定义其系统级安全边界，重点关注模型执行环境安全、上下文与用户行为数据保护、隐私数据最小化暴露，为 AI 能力的安全部署提供架构级支持。</li>
+                        <li>校企合作与前瞻研究负责人：担任 vivo 安全技术校企合作负责人，主导与多所高校的联合研究项目，覆盖用户行为认证、内核漏洞挖掘、端侧内容与广告合规检测等方向，推动前瞻性研究成果向工程化与产品化转化。</li>
+                        <li>安全技术影响力建设：主编并发布《千镜安全架构技术白皮书》《vivo 安全与隐私保护透明白皮书》《OriginOS 安全白皮书》；在职期间申请专利二十余篇，参加高通 QPSS、WAIC、ISC、YOCSEF 等工业界和学术界会议宣讲，持续提升 vivo 在移动系统安全领域的行业影响力。共发表十余篇国际会议/期刊论文（Android 安全、可信计算、分布式系统安全）。</li>
                     </ul>
                 </div>
             </div>
@@ -473,15 +485,14 @@
             <div class="exp-item">
                 <div class="exp-header">
                     <span class="exp-company">华为技术有限公司</span>
-                    <span class="exp-date">2017.08 - 2021.08</span>
+                    <span class="exp-date">2017.08 - 2021.07</span>
                 </div>
                 <div class="exp-role">高级工程师</div>
                 <div class="exp-desc">
                     <ul>
-                        <li>消费者BG软件研究部：主导端侧安全功能方向的调研与预研，覆盖终端安全、设备互信与系统防护。</li>
-                        <li>分布式系统安全架构：参与并推动分布式系统关键安全能力研究，增强1+8+N超级终端场景下的设备互信与安全通信。</li>
-                        <li>提出三方设备加密共享、数据溯源等方案并形成专利。</li>
-                        <li>2012实验室：参与网络安全与零信任架构研究，提出并实现异常流量协同检测方案。</li>
+                        <li>端侧安全能力研究与落地：在消费者 BG 软件研究部，主导端侧安全功能方向的调研与预研，协同业务团队完成安全能力设计、开发与产品化落地，覆盖终端安全、设备互信与系统防护等方向。</li>
+                        <li>分布式系统安全架构：参与并推动分布式系统关键安全能力研究，增强 1+8+N 超级终端场景下的设备互信与安全通信能力；提出三方设备加密共享、数据溯源等方案并形成专利，推动分布式安全技术在实际业务中的应用。</li>
+                        <li>网络与零信任方向研究（2012 实验室）：参与网络安全与零信任架构研究，提出并实现异常流量协同检测方案，显著提升检测准确率；参与轻量密码、可信网络设备与区块链在网络安全中的应用研究。</li>
                     </ul>
                 </div>
             </div>
@@ -489,15 +500,13 @@
             <div class="exp-item">
                 <div class="exp-header">
                     <span class="exp-company">意大利都灵理工大学</span>
-                    <span class="exp-date">2013.03 - 2017.11</span>
+                    <span class="exp-date">2013.03 - 2017.07</span>
                 </div>
-                <div class="exp-role">博士研究生 / 硕士研究生导师</div>
+                <div class="exp-role">博士研究生，并担任硕士研究生导师</div>
                 <div class="exp-desc">
                     <ul>
-                        <li>博士阶段聚焦分布式系统完整性与可信计算。</li>
-                        <li>参与多个FP7和H2020的欧盟项目(SHIELD、SECURED、webinos等。)</li>
-                        <li>提出并实现远程证明框架、可信通道及容器级完整性证明原型。</li>
-                        <li>相关成果可直接应用于云平台与软件化网络设备场景，受邀在ETSI NFV标准会议进行展示。</li>
+                        <li>博士阶段聚焦分布式系统完整性与可信计算，参与多个 FP7 和 H2020 的欧盟项目（SHIELD、SECURED、webinos 等），提出并实现远程证明框架、可信通道及容器级完整性证明原型。</li>
+                        <li>相关成果可直接应用于云平台与软件化网络设备场景，并受邀在 ETSI NFV 标准会议进行展示。</li>
                     </ul>
                 </div>
             </div>
@@ -509,35 +518,49 @@
             <div class="project-grid">
                 <div class="project-item">
                     <div class="project-header">
-                        <span class="project-name">vivo端侧系统安全架构建设</span>
+                        <span class="project-name">云侧机密计算研究项目</span>
                     </div>
-                    <p class="project-desc">规划设计覆盖系统各层级的安全架构，预判威胁、制定防护策略。主持执行漏洞测试、风险评估，推动技术预研落地，输出专利、白皮书等成果。</p>
+                    <p class="project-desc">负责 vivo 公司内云端机密计算研究项目，支撑公司内私密计算云的能力，提升 vivo AIGC 业务在云端的用户数据隐私保护能力，增强相关业务的市场竞争力和业界口碑。</p>
                 </div>
                 <div class="project-item">
                     <div class="project-header">
                         <span class="project-name">手机侧虚拟化技术研究</span>
                         <span class="project-date">2023.08 - 2025.06</span>
                     </div>
-                    <p class="project-desc">通过对安卓框架中的虚拟化框架和SoC平台的虚拟化技术研究，支撑vivo手机内关键业务的安全部署。</p>
+                    <p class="project-desc">主持手机端侧虚拟化技术研究，通过对安卓框架中的虚拟化框架和 SoC 平台虚拟化技术的研究，支撑 vivo 手机内关键业务的安全部署，提升业务自身安全性以及产品竞争力。</p>
                 </div>
                 <div class="project-item">
                     <div class="project-header">
-                        <span class="project-name">云侧机密计算研究项目</span>
-                    </div>
-                    <p class="project-desc">支撑公司内私密计算云的能力，提升vivo AIGC业务在云端的用户数据隐私保护能力。</p>
-                </div>
-                <div class="project-item">
-                    <div class="project-header">
-                        <span class="project-name">vivo复旦快应用恶意行为检测</span>
+                        <span class="project-name">vivo 复旦快应用小游戏恶意行为检测合作项目</span>
                         <span class="project-date">2023.07 - 2024.06</span>
                     </div>
-                    <p class="project-desc">通过静态代码分析形成检测规则，识别带有恶意行为的快应用，提升vivo手机中快应用的安全性。</p>
+                    <p class="project-desc">主持 vivo 与复旦的快应用恶意行为检测合作项目，通过静态代码分析形成对应的检测规则，识别带有恶意行为的快应用，提升在 vivo 手机中运行的快应用安全性与产品价值。</p>
                 </div>
                 <div class="project-item">
                     <div class="project-header">
-                        <span class="project-name">vivo公司内手机端侧智能体安全技术研究</span>
+                        <span class="project-name">vivo 复旦框架服务层中的访问控制安全分析项目</span>
+                        <span class="project-date">2022.09 - 2023.02</span>
                     </div>
-                    <p class="project-desc">对端侧部署的智能体进行风险分析、安全需求分析，支持下一代AI手机的安全架构设计，在高通QPSS，WAIC大会和CCF大会宣讲安全技术研究方向。</p>
+                    <p class="project-desc">主持 vivo 与复旦对 vivo 手机内框架服务层的代码分析，通过 CFG 的方式找寻框架服务层中可能存在的访问控制漏洞，提升 vivo 手机内代码安全性与产品安全口碑。</p>
+                </div>
+                <div class="project-item">
+                    <div class="project-header">
+                        <span class="project-name">vivo 武大基于用户行为的指纹认证增强技术合作项目</span>
+                        <span class="project-date">2021.11 - 2022.05</span>
+                    </div>
+                    <p class="project-desc">主持 vivo 与武汉大学的基于用户行为的指纹认证增强技术合作，利用用户指纹认证时的身体姿势或解锁模式差异，判断用户是否处于醉酒或不清醒状态，增强手机指纹认证准确性。</p>
+                </div>
+                <div class="project-item">
+                    <div class="project-header">
+                        <span class="project-name">vivo 公司内手机端侧智能体安全技术研究</span>
+                    </div>
+                    <p class="project-desc">主持 vivo 手机端侧智能体安全技术能力研究，开展端侧部署智能体的风险分析、安全需求分析和端侧所需安全技术能力识别，支持下一代 AI 手机的安全架构设计与能力实现，并在 CCF 大会宣讲安全技术研究方向，提升 vivo 在端侧智能体方向的行业影响力。</p>
+                </div>
+                <div class="project-item">
+                    <div class="project-header">
+                        <span class="project-name">vivo 手机端侧系统安全架构建设</span>
+                    </div>
+                    <p class="project-desc">主持 vivo 手机端侧系统安全架构建设，规划设计覆盖系统各层级的安全架构，预判威胁、制定防护策略；主持执行漏洞测试与风险评估，推动技术预研落地，联动业务制定安全目标，并输出专利、白皮书等成果，通过校企合作与行业分享扩大技术影响力。</p>
                 </div>
             </div>
         </div>
@@ -549,6 +572,7 @@
                 <li class="pub-item">
                     <span class="pub-badge">标准</span>
                     <div class="pub-title">T/TAF 310—2025 移动智能终端端侧大模型安全实施指南</div>
+                    <div class="pub-meta">移动智能终端端侧大模型安全实施指南团体标准，2025。</div>
                 </li>
                 <li class="pub-item">
                     <span class="pub-badge">白皮书</span>
@@ -568,22 +592,52 @@
                 <li class="pub-item">
                     <span class="pub-badge">论文</span>
                     <div class="pub-title">Continuous integration for web-based software infrastructures: lessons learned on the webinos project</div>
-                    <div class="pub-meta">Hardware and Software: Verification and Testing, Springer, 2013</div>
+                    <div class="pub-meta">Tao Su, John Lyle, Andrea Atzeni, Shamal Faily, Habib Virji, Christos Ntanos, and Christos Botsikas. Hardware and Software: Verification and Testing, LNCS 8244, pp. 145–150, Springer, 2013.</div>
                 </li>
                 <li class="pub-item">
                     <span class="pub-badge">论文</span>
                     <div class="pub-title">Trusted computing technology and proposals for resolving cloud computing security problems</div>
-                    <div class="pub-meta">Cloud Computing Security Foundations and Challenges, CRC Press, 2016</div>
+                    <div class="pub-meta">Tao Su, Antonio Lioy, and Nicola Barresi. Cloud Computing Security: Foundations and Challenges, pp. 345–358, CRC Press, 2016.</div>
                 </li>
                 <li class="pub-item">
                     <span class="pub-badge">论文</span>
-                    <div class="pub-title">Trust in SDN/NFV environments</div>
-                    <div class="pub-meta">Guide to Security in SDN and NFV, Springer, 2017</div>
+                    <div class="pub-title">Trust in SDN/NFV Environments</div>
+                    <div class="pub-meta">Antonio Lioy, Tao Su, Diego R. Lopez, Antonio Pastor, Adrian L. Shaw, and Hamza Attak. Guide to Security in SDN and NFV: Challenges, Opportunities, and Applications, pp. 103–124, Springer, 2017.</div>
                 </li>
                 <li class="pub-item">
                     <span class="pub-badge">论文</span>
                     <div class="pub-title">A formal approach for network security policy validation</div>
-                    <div class="pub-meta">Journal of Wireless Mobile Networks, Ubiquitous Computing and Dependable Applications, 2017</div>
+                    <div class="pub-meta">Fulvio Valenza, Tao Su, Serena Spinoso, Antonio Lioy, Riccardo Sisto, and Marco Vallini. Journal of Wireless Mobile Networks, Ubiquitous Computing and Dependable Applications, 8(1):79–100, 2017.</div>
+                </li>
+                <li class="pub-item">
+                    <span class="pub-badge">论文</span>
+                    <div class="pub-title">Android apps risk evaluation: a methodology</div>
+                    <div class="pub-meta">Andrea Atzeni, Tao Su, Madalina Baltatu, Rosalia D’Alessandro, and Giovanni Pessiva. ICST Transactions on Ubiquitous Environments, 1(4):1–18, 2015.</div>
+                </li>
+                <li class="pub-item">
+                    <span class="pub-badge">论文</span>
+                    <div class="pub-title">How Dangerous is Your Android App? An Evaluation Methodology</div>
+                    <div class="pub-meta">Andrea Atzeni, Tao Su, Madalina Baltatu, Rosalia D’Alessandro, and Giovanni Pessiva. 11th International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services, pp. 130–139, ICST, 2014.</div>
+                </li>
+                <li class="pub-item">
+                    <span class="pub-badge">论文</span>
+                    <div class="pub-title">Lightweight formal verification in real world, a case study</div>
+                    <div class="pub-meta">Andrea Atzeni, Tao Su, and Teodoro Montanaro. CAiSE 2014 Advanced Information Systems Engineering Workshops, Lecture Notes in Business Information Processing 178, pp. 335–342, Springer, 2014.</div>
+                </li>
+                <li class="pub-item">
+                    <span class="pub-badge">论文</span>
+                    <div class="pub-title">Cloudification of public services in smart cities: the clips project</div>
+                    <div class="pub-meta">Antonio Filograna, Paolo Smiraglia, Celia Gilsanz, Srdjan Krco, Arturo Medela, and Tao Su. Proceedings of the 21st IEEE Symposium on Computers and Communications (ISCC 2016), pp. 153–158, IEEE, 2016.</div>
+                </li>
+                <li class="pub-item">
+                    <span class="pub-badge">论文</span>
+                    <div class="pub-title">The trust problem in modern network infrastructures</div>
+                    <div class="pub-meta">Ludovic Jacquin, Antonio Lioy, Diego R. Lopez, Adrian L. Shaw, and Tao Su. Cyber Security and Privacy, pp. 116–127, Springer, 2016.</div>
+                </li>
+                <li class="pub-item">
+                    <span class="pub-badge">论文</span>
+                    <div class="pub-title">Offloading personal security applications to a secure and trusted network node</div>
+                    <div class="pub-meta">Roberto Bonafiglia, Francesco Ciaccia, Antonio Lioy, Mario Nemirovsky, Fulvio Giovanni Ottavio Risso, and Tao Su. NetSoft 2015: 1st IEEE Conference on Network Softwarization, pp. 1–2, IEEE, 2015.</div>
                 </li>
             </ul>
             <p style="margin-top: 20px; color: #666; font-size: 0.9em;">
