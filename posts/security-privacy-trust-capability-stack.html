@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安全、隐私、信任：AI 智能体时代的治理能力栈 | 苏涛的博客</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a1a2e;
+            --accent: #16213e;
+            --highlight: #0f3460;
+            --text: #333;
+            --light: #f8f9fa;
+            --border: #e9ecef;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+            line-height: 1.8;
+            color: var(--text);
+            background: #fafafa;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0 30px;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 1.5em;
+            color: #1a1a1a;
+            margin-bottom: 6px;
+        }
+
+        header .subtitle {
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        nav {
+            margin: 20px 0 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #555;
+            text-decoration: none;
+            margin: 0 12px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: #333;
+            color: #fff;
+        }
+
+        article {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .post-meta {
+            color: #999;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        article h1 {
+            font-size: 1.8em;
+            color: var(--primary);
+            margin-bottom: 10px;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        article h2 {
+            font-size: 1.3em;
+            color: var(--primary);
+            margin: 40px 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        article h3 {
+            font-size: 1.1em;
+            color: var(--highlight);
+            margin: 28px 0 12px;
+        }
+
+        article p {
+            margin-bottom: 16px;
+            color: #444;
+        }
+
+        article blockquote {
+            border-left: 4px solid var(--highlight);
+            padding: 12px 20px;
+            margin: 20px 0;
+            background: var(--light);
+            border-radius: 0 8px 8px 0;
+            color: #555;
+            font-style: italic;
+        }
+
+        article blockquote p {
+            margin-bottom: 0;
+        }
+
+        article ul, article ol {
+            margin: 12px 0 20px 24px;
+            color: #444;
+        }
+
+        article li {
+            margin-bottom: 6px;
+        }
+
+        article strong {
+            color: #1a1a1a;
+        }
+
+        article table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9em;
+        }
+
+        article table th {
+            background: var(--primary);
+            color: #fff;
+            padding: 10px 14px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        article table td {
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+
+        article table tr:nth-child(even) td {
+            background: #fafafa;
+        }
+
+        article table tr:hover td {
+            background: #f0f4f8;
+        }
+
+        article img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 24px auto;
+            border-radius: 8px;
+        }
+
+        article hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 40px 0;
+        }
+
+        .back-link {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .back-link a {
+            color: #555;
+            text-decoration: none;
+            padding: 8px 20px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            font-size: 0.95em;
+        }
+
+        .back-link a:hover {
+            background: #333;
+            color: #fff;
+            border-color: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #999;
+            border-top: 1px solid #e0e0e0;
+            font-size: 0.9em;
+        }
+
+        .era-highlight {
+            margin: 24px 0;
+            padding: 16px 20px;
+            background: var(--light);
+            border-radius: 8px;
+            border-left: 4px solid var(--highlight);
+        }
+
+        .era-highlight strong {
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+
+        @media (max-width: 600px) {
+            article {
+                padding: 24px 18px;
+            }
+            article h1 {
+                font-size: 1.4em;
+            }
+            article h2 {
+                font-size: 1.15em;
+            }
+            article table {
+                font-size: 0.78em;
+            }
+            article table th,
+            article table td {
+                padding: 8px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>苏涛的博客</h1>
+            <p class="subtitle">记录思考，分享技术</p>
+            <nav>
+                <a href="../index.html">首页</a>
+                <a href="../resume.html">简历</a>
+                <a href="#">联系</a>
+            </nav>
+        </header>
+
+        <article>
+            <h1>安全、隐私、信任：AI 智能体时代的治理能力栈</h1>
+            <p class="post-meta">2026年9月1日</p>
+
+            <p>前段时间和朋友聊到一个问题：现在的手机 AI 智能体——能帮你订外卖、查日程、操作 App 的那种——到底安不安全？</p>
+
+            <p>你会发现，回答这个问题其实很棘手。因为"安全"这个词，在不同人嘴里指的东西完全不一样。</p>
+
+            <p>搞安全的工程师说：要看有没有加密、有没有沙箱、有没有权限控制。做隐私的人说：要看数据去了哪里、有没有被滥用。而作为普通用户，你真正想问的是：我能不能相信它？</p>
+
+            <p>这三个问题，恰好对应了数字系统治理能力的三个层次。它们不是互相替代的历史阶段，而是一个<strong>逐层叠加的能力栈</strong>——这就是我想说的模型。</p>
+
+            <p>这套模型不是凭空想出来的，它来自数字系统本身的演变轨迹。</p>
+
+            <div class="era-highlight">
+                <p><strong>PC 时代</strong>，系统运行在相对封闭的主机和终端上。治理的首要任务是防入侵、防越权——机密性、完整性、可用性构成安全防御的基石。加密、认证、访问控制、隔离——这些能力解决的是"系统能不能扛住攻击"的问题，至今仍是数字系统的底线。</p>
+            </div>
+
+            <div class="era-highlight">
+                <p><strong>手机时代</strong>，设备变成了随身携带的传感器终端。位置、联系人、相册、支付、行为轨迹——所有个人数据汇聚到一个巴掌大的设备上。风险不再只是"数据被偷走"，还有"数据被过度收集、超出目的使用、在不透明条件下共享"。隐私治理——数据最小化、目的限制、情境合规、可撤回授权——成为独立于安全防御的新需求。</p>
+            </div>
+
+            <div class="era-highlight">
+                <p><strong>智能体时代</strong>，系统不再只是被动响应，而是主动替用户感知、规划、执行。手机上的智能体可以读取屏幕、调用 App、代替你操作。这时候问题变了：它理解我的意图吗？我能不能监督它、打断它、追责它？可信交互——意图确认、动作解释、审计追责、信任校准——成了第三层。</p>
+            </div>
+
+            <p>三层不是替代关系。手机时代仍然需要 PC 时代的安全能力，智能体时代仍然需要手机时代的隐私保护。每一代都在前一代的基础上，叠加了一层新的治理需求。</p>
+
+            <hr>
+
+            <h2>第一层：安全防御</h2>
+
+            <p>这是最基础的一层。它回答的问题是：<strong>系统能不能扛住攻击？</strong></p>
+
+            <p>传统信息安全用 CIA 三元组来定义这一层：</p>
+
+            <ul>
+                <li><strong>保密性（Confidentiality）</strong>——数据没被不该看的人看到。</li>
+                <li><strong>完整性（Integrity）</strong>——数据没被篡改。</li>
+                <li><strong>可用性（Availability）</strong>——需要的时候能用。</li>
+            </ul>
+
+            <p>对智能体来说，这一层还要更复杂一些：工具调用权限、执行环境隔离、系统完整性证明、恶意输入防护、异常状态下的降级与恢复……它的目标不仅是"挡住攻击"，也是让系统在复杂环境中持续、可控地按预期运行。</p>
+
+            <p>没有这一层，上面的一切都免谈。但如果只有这一层，远远不够。</p>
+
+            <p>一个系统即使没有被攻击过，也可能因为过度收集数据、目的漂移、内部滥用或者不透明的数据共享，造成严重的隐私问题。<strong>安全是隐私的必要条件，但不是充分条件。</strong></p>
+
+            <hr>
+
+            <h2>第二层：隐私治理</h2>
+
+            <p>第二层关心的问题是：<strong>数据在它的整个生命周期里，处理得是否正当？</strong></p>
+
+            <p>注意，这里的关键词不是"有没有被偷"，而是"正不正当"。一个 App 被授权读取位置，但持续在后台追踪你——这不算攻击，但这不正当。智能体为了帮你订餐读取屏幕，但顺带记下了你和朋友的聊天内容——这也不算攻击，但同样不正当。</p>
+
+            <p>道理很简单：隐私不是简单的公开/私密二分，而是<strong>信息流是否符合具体情境中的规范</strong>。同样是读取你的联系人，在帮你拨号的情境下是正当的，在后台默默上传做用户画像的情境下就是不正当的。</p>
+
+            <p>所以隐私层不是安全层的附属品。它处理的是"合法权限下的不当使用"——这个问题的范围比"被攻击"要大得多，也需要完全不同的治理机制：数据最小化、目的限制、敏感信息识别、端侧处理、可撤回授权……</p>
+
+            <hr>
+
+            <h2>第三层：可信交互</h2>
+
+            <p>前两层处理的是"系统被攻击"和"数据被滥用"的问题。但当系统开始替你行动——规划、推理、调用工具、执行操作——一个新问题浮现了：<strong>我能不能相信它替我做决定？</strong></p>
+
+            <p>这不是一个技术问题，但技术必须参与回答。</p>
+
+            <p>用户可能过度信任智能体，放弃监督，把敏感操作交给一个并不完全理解自己意图的系统。也可能信任不足，明明系统可靠却不敢用。这里有一个关键概念：<strong>适当依赖（Appropriate Reliance）</strong>——人对自动化系统的信任程度，应该与系统的真实能力相匹配。</p>
+
+            <p>信任校准，不是制造信任感，而是让信任落在合理的位置上。</p>
+
+            <p>在智能体场景下，这意味着需要一套具体的交互机制来支撑信任：</p>
+
+            <ul>
+                <li><strong>意图确认</strong>：智能体在行动之前，先确认它理解对了你的意思。</li>
+                <li><strong>动作解释</strong>：不是事后弹一个日志，而是在执行前告诉你"我要做什么，为什么这么做"。</li>
+                <li><strong>可审计</strong>：出了问题能回放、能追责。</li>
+                <li><strong>可撤销</strong>：用户能在任何时候打断或撤回操作。</li>
+                <li><strong>不确定性表达</strong>：当智能体不确定时，它应该主动告诉你，而不是假装确定。</li>
+            </ul>
+
+            <p>还有一点常被忽略：<strong>第三方内容的诱导问题</strong>。如果智能体根据网页内容或第三方通知做出行动，用户需要能清晰区分"这是用户自己的指令"和"这是第三方内容触发的动作"。</p>
+
+            <hr>
+
+            <h2>三层能力地图</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>层级</th>
+                        <th>核心问题</th>
+                        <th>典型能力</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>安全防御</strong></td>
+                        <td>系统能否扛住攻击、越权和故障？</td>
+                        <td>加密、认证、隔离、完整性证明、异常处理</td>
+                    </tr>
+                    <tr>
+                        <td><strong>隐私治理</strong></td>
+                        <td>数据在其全生命周期中处理是否正当？</td>
+                        <td>数据最小化、目的限制、情境合规、端侧处理</td>
+                    </tr>
+                    <tr>
+                        <td><strong>可信交互</strong></td>
+                        <td>用户能否理解、监督和适当信赖智能体？</td>
+                        <td>意图确认、动作解释、审计追责、信任校准</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>每一层都依赖下层，但下层无法替代上层。安全控制做得再好，也不能自动解决隐私正当性问题；隐私政策写得再完善，也不能自动让用户信任一个自治系统。</p>
+
+            <hr>
+
+            <h2>说回手机智能体</h2>
+
+            <p>把这三层套到手机智能体上，每一层都能看到具体的工程方向。</p>
+
+            <p><strong>安全防御层</strong>关心的是：智能体会不会被诱导执行危险操作？本地沙箱、工具调用权限、跨 App 边界、操作系统级身份绑定、端侧密钥管理、对抗提示检测——这些都是当前能看到的技术路径。</p>
+
+            <p><strong>隐私治理层</strong>关心的是：智能体在处理屏幕内容、联系人、位置、相册时，是不是只拿了它该拿的？端侧敏感信息识别、屏幕内容最小化读取、与任务无关信息遮蔽、本地优先处理——这些机制正在被 Google 的 Private Compute Core、Apple 的 Private Cloud Compute 处理等方案逐步实现。</p>
+
+            <p><strong>可信交互层</strong>关心的是：用户能不能真正理解和控制智能体在做什么？意图确认弹窗、高风险动作预览、可回放审计日志、一键撤销——这些看起来是"交互设计"问题，但实际上是安全架构问题，因为信任的建立需要系统级的可验证、可审计、可干预机制来支撑。</p>
+
+            <hr>
+
+            <h2>所以</h2>
+
+            <p>这套模型想表达的核心判断是：<strong>手机智能体的安全架构，不应只被设计成权限控制系统，而应被设计成覆盖安全防御、隐私治理与可信交互的多层治理架构。</strong></p>
+
+            <p>安全是底线，隐私是准绳，信任是结果。三层叠加，才构成一个真正可用的智能体系统。</p>
+
+            <p>这也是为什么"AI 智能体安不安全"这个问题很难一句话回答——你得先问清楚，你说的安全，是哪一个层面上的安全。</p>
+        </article>
+
+        <div class="back-link">
+            <a href="../index.html">← 返回首页</a>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 苏涛的博客. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

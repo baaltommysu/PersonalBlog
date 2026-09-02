@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>苏涛 | AIOS 安全负责人</title>
+    <title>苏涛 | 简历</title>
     <style>
         * {
             margin: 0;
@@ -22,144 +22,152 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
-            line-height: 1.7;
+            line-height: 1.8;
             color: var(--text);
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
-        }
-
-        html {
-            scroll-behavior: smooth;
+            background: #fafafa;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 20px;
         }
 
-        /* 头部名片区域 */
-        .header-card {
-            background: white;
-            border-radius: 16px;
-            padding: 50px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-            position: relative;
-            overflow: hidden;
+        header {
+            text-align: center;
+            padding: 40px 0 30px;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 40px;
         }
 
-        .header-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--highlight));
+        header h1 {
+            font-size: 1.5em;
+            color: #1a1a1a;
+            margin-bottom: 6px;
         }
 
-        .profile-section {
-            display: flex;
-            gap: 40px;
-            align-items: flex-start;
+        header .subtitle {
+            color: #999;
+            font-size: 0.9em;
         }
 
-        .avatar {
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(135deg, var(--primary), var(--highlight));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 48px;
-            font-weight: bold;
-            flex-shrink: 0;
+        nav {
+            margin: 20px 0 0;
+            text-align: center;
         }
 
-        .profile-info {
-            flex: 1;
+        nav a {
+            color: #555;
+            text-decoration: none;
+            margin: 0 12px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
         }
 
-        .name {
-            font-size: 2.2em;
+        nav a:hover {
+            background: #333;
+            color: #fff;
+        }
+
+        article {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        article h1 {
+            font-size: 1.8em;
             color: var(--primary);
-            margin-bottom: 8px;
-            font-weight: 700;
+            margin-bottom: 10px;
+            text-align: center;
+            line-height: 1.4;
         }
 
-        .title {
+        article h2 {
+            font-size: 1.3em;
+            color: var(--primary);
+            margin: 40px 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        article h3 {
             font-size: 1.1em;
             color: var(--highlight);
+            margin: 28px 0 12px;
+        }
+
+        article p {
+            margin-bottom: 16px;
+            color: #444;
+        }
+
+        article strong {
+            color: #1a1a1a;
+        }
+
+        article ul, article ol {
+            margin: 12px 0 20px 24px;
+            color: #444;
+        }
+
+        article li {
+            margin-bottom: 8px;
+        }
+
+        .resume-header {
+            text-align: center;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--border);
+            margin-bottom: 30px;
+        }
+
+        .resume-header h1 {
+            font-size: 2em;
+            margin-bottom: 6px;
+        }
+
+        .resume-header .title {
+            color: var(--highlight);
+            font-size: 1.1em;
             margin-bottom: 20px;
-            font-weight: 500;
         }
 
         .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 12px;
-            font-size: 0.95em;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px 20px;
+            font-size: 0.9em;
             color: #666;
         }
 
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-            line-height: 1.6;
-        }
-
-        .contact-item::before {
-            content: '•';
+        .contact-grid a {
             color: var(--highlight);
-            font-weight: bold;
-        }
-
-        .contact-item a {
-            color: inherit;
             text-decoration: none;
         }
 
-        .contact-item a:hover {
-            color: var(--highlight);
-        }
-
-        /* 内容卡片 */
-        .section-card {
-            background: white;
-            border-radius: 12px;
-            padding: 35px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            scroll-margin-top: 90px;
+        .contact-grid a:hover {
+            text-decoration: underline;
         }
 
         .section-title {
-            font-size: 1.4em;
+            font-size: 1.3em;
             color: var(--primary);
-            margin-bottom: 25px;
-            padding-bottom: 12px;
+            margin: 40px 0 16px 0;
+            padding-bottom: 8px;
             border-bottom: 2px solid var(--border);
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
 
-        .section-title::before {
-            content: '';
-            width: 4px;
-            height: 24px;
-            background: var(--highlight);
-            border-radius: 2px;
+        .section-title:first-of-type {
+            margin-top: 0;
         }
 
-        /* 教育经历 */
         .edu-item {
-            display: flex;
-            gap: 20px;
             margin-bottom: 20px;
             padding-bottom: 20px;
             border-bottom: 1px solid var(--border);
@@ -172,60 +180,57 @@
         }
 
         .edu-badge {
+            display: inline-block;
             background: var(--light);
-            padding: 8px 16px;
-            border-radius: 20px;
+            padding: 4px 12px;
+            border-radius: 12px;
             font-size: 0.85em;
             color: var(--highlight);
             font-weight: 600;
-            white-space: nowrap;
+            margin-bottom: 6px;
         }
 
         .edu-content h4 {
             color: var(--primary);
-            margin-bottom: 5px;
-            font-size: 1.1em;
+            margin-bottom: 4px;
         }
 
         .edu-content p {
             color: #666;
             font-size: 0.95em;
+            margin-bottom: 0;
         }
 
-        /* 工作经历 */
         .exp-item {
             margin-bottom: 30px;
-            padding-left: 20px;
+            padding-left: 16px;
             border-left: 3px solid var(--highlight);
         }
 
-        .exp-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 12px;
-            flex-wrap: wrap;
-            gap: 10px;
+        .exp-item:last-child {
+            margin-bottom: 0;
         }
 
         .exp-company {
-            font-size: 1.2em;
+            font-size: 1.1em;
             color: var(--primary);
             font-weight: 600;
         }
 
         .exp-date {
             color: #888;
-            font-size: 0.9em;
+            font-size: 0.85em;
             background: var(--light);
-            padding: 4px 12px;
-            border-radius: 12px;
+            padding: 2px 10px;
+            border-radius: 10px;
+            display: inline-block;
+            margin: 4px 0 6px;
         }
 
         .exp-role {
             color: var(--highlight);
             font-weight: 500;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
 
         .exp-desc {
@@ -235,18 +240,12 @@
         }
 
         .exp-desc ul {
-            margin-top: 10px;
-            padding-left: 20px;
+            margin-top: 6px;
+            padding-left: 18px;
         }
 
         .exp-desc li {
-            margin-bottom: 8px;
-        }
-
-        /* 项目经历 */
-        .project-grid {
-            display: grid;
-            gap: 20px;
+            margin-bottom: 6px;
         }
 
         .project-item {
@@ -254,39 +253,38 @@
             padding: 20px;
             border-radius: 10px;
             border-left: 4px solid var(--highlight);
+            margin-bottom: 16px;
         }
 
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-            flex-wrap: wrap;
-            gap: 10px;
+        .project-item:last-child {
+            margin-bottom: 0;
         }
 
         .project-name {
             font-weight: 600;
             color: var(--primary);
+            margin-bottom: 6px;
         }
 
         .project-date {
             font-size: 0.85em;
             color: #888;
+            margin-bottom: 6px;
         }
 
         .project-desc {
             font-size: 0.9em;
             color: #666;
+            margin-bottom: 0;
         }
 
-        /* 论文发表 */
         .pub-list {
             list-style: none;
+            padding-left: 0;
         }
 
         .pub-item {
-            padding: 15px 0;
+            padding: 14px 0;
             border-bottom: 1px solid var(--border);
             font-size: 0.95em;
         }
@@ -298,15 +296,13 @@
         .pub-title {
             color: var(--primary);
             font-weight: 500;
-            margin-bottom: 5px;
-            overflow-wrap: anywhere;
+            margin-bottom: 4px;
         }
 
         .pub-meta {
             color: #888;
             font-size: 0.9em;
             line-height: 1.7;
-            overflow-wrap: anywhere;
         }
 
         .pub-badge {
@@ -316,10 +312,9 @@
             padding: 2px 8px;
             border-radius: 4px;
             font-size: 0.75em;
-            margin-right: 8px;
+            margin-right: 6px;
         }
 
-        /* 自我认知 */
         .self-list {
             color: #555;
             font-size: 0.95em;
@@ -328,174 +323,115 @@
         }
 
         .self-list li {
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
-        /* 页脚 */
+        .back-link {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .back-link a {
+            color: #555;
+            text-decoration: none;
+            padding: 8px 20px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            font-size: 0.95em;
+        }
+
+        .back-link a:hover {
+            background: #333;
+            color: #fff;
+            border-color: #333;
+        }
+
         footer {
             text-align: center;
-            padding: 30px;
-            color: #888;
+            padding: 30px 0;
+            color: #999;
+            border-top: 1px solid #e0e0e0;
             font-size: 0.9em;
         }
 
-        /* 响应式 */
-        @media (max-width: 768px) {
-            .profile-section {
+        @media (max-width: 600px) {
+            article {
+                padding: 24px 18px;
+            }
+            article h1 {
+                font-size: 1.4em;
+            }
+            .resume-header h1 {
+                font-size: 1.6em;
+            }
+            .contact-grid {
                 flex-direction: column;
                 align-items: center;
-                text-align: center;
-            }
-
-            .header-card {
-                padding: 30px 25px;
-            }
-
-            .name {
-                font-size: 1.8em;
-            }
-
-            .exp-header {
-                flex-direction: column;
-            }
-
-            .edu-item {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-                text-align: left;
-            }
-        }
-
-        /* 导航 */
-        .nav-bar {
-            background: white;
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
-        }
-
-        .nav-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-logo {
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 25px;
-        }
-
-        .nav-links a {
-            color: #666;
-            text-decoration: none;
-            font-size: 0.95em;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--highlight);
-        }
-
-        @media (max-width: 600px) {
-            .nav-links {
-                gap: 15px;
-                font-size: 0.9em;
+                gap: 4px;
             }
         }
     </style>
 </head>
 <body>
-    <nav class="nav-bar">
-        <div class="nav-content">
-            <div class="nav-logo">苏涛</div>
-            <div class="nav-links">
-                <a href="index.html">首页</a>
-                <a href="#experience">经历</a>
-                <a href="#projects">项目</a>
-                <a href="#publications">成果</a>
-                <a href="mailto:baaltommysu@icloud.com">联系</a>
-            </div>
-        </div>
-    </nav>
-
     <div class="container">
-        <!-- 个人名片 -->
-        <div class="header-card" id="profile">
-            <div class="profile-section">
-                <div class="avatar">苏</div>
-                <div class="profile-info">
-                    <h1 class="name">苏涛</h1>
-                    <p class="title">AIOS 安全负责人 | 江苏省网络安全高级工程师 | 浙江大学产业导师</p>
-                    <div class="contact-grid">
-                        <div class="contact-item">男</div>
-                        <div class="contact-item">现居住地：杭州</div>
-                        <div class="contact-item">学历：博士</div>
-                        <div class="contact-item">邮箱：<a href="mailto:baaltommysu@icloud.com">baaltommysu@icloud.com</a></div>
-                        <div class="contact-item">职称：江苏省网络安全高级工程师</div>
-                        <div class="contact-item">浙江大学网络安全实验室硕士研究生产业导师</div>
-                    </div>
+        <header>
+            <h1>苏涛的博客</h1>
+            <p class="subtitle">记录思考，分享技术</p>
+            <nav>
+                <a href="index.html">首页</a>
+                <a href="resume.html">简历</a>
+                <a href="#">联系</a>
+            </nav>
+        </header>
+
+        <article>
+            <div class="resume-header">
+                <h1>苏涛</h1>
+                <p class="title">AIOS 安全负责人 | 江苏省网络安全高级工程师 | 浙江大学产业导师</p>
+                <div class="contact-grid">
+                    <span>男</span>
+                    <span>现居住地：杭州</span>
+                    <span>学历：博士</span>
+                    <span>邮箱：<a href="mailto:baaltommysu@icloud.com">baaltommysu@icloud.com</a></span>
+                    <span>职称：江苏省网络安全高级工程师</span>
+                    <span>浙江大学网络安全实验室硕士研究生产业导师</span>
                 </div>
             </div>
-        </div>
 
-        <!-- 个人简介 -->
-        <div class="section-card" id="summary">
             <h2 class="section-title">个人简介</h2>
-            <p style="color: #555; line-height: 1.9;">
+            <p>
                 AIOS 安全负责人，长期从事移动操作系统、可信计算、机密计算、虚拟化与 AI 安全的架构设计与技术决策。具备从模型—芯片—内核—系统框架—应用—端云协同的系统级安全架构经验，负责关键安全能力的引入评审与架构取舍，相关决策直接影响产品技术路线，覆盖上亿台终端设备及其配套服务。
             </p>
-        </div>
 
-        <!-- 教育背景 -->
-        <div class="section-card" id="education">
             <h2 class="section-title">教育背景</h2>
             <div class="edu-item">
                 <span class="edu-badge">博士 2013 - 2017</span>
                 <div class="edu-content">
-                    <h4>意大利都灵理工大学（QS 250）</h4>
+                    <h4>意大利都灵理工大学</h4>
                     <p>计算机系（QS 150） · 系统安全工程</p>
                 </div>
             </div>
             <div class="edu-item">
                 <span class="edu-badge">硕士 2011 - 2013</span>
                 <div class="edu-content">
-                    <h4>意大利都灵理工大学（QS 250）</h4>
+                    <h4>意大利都灵理工大学</h4>
                     <p>计算机系（QS 150） · 计算机网络工程</p>
                 </div>
             </div>
             <div class="edu-item">
                 <span class="edu-badge">学士 2007 - 2011</span>
                 <div class="edu-content">
-                    <h4>意大利都灵理工大学（QS 250）</h4>
+                    <h4>意大利都灵理工大学</h4>
                     <p>电子与通信系（QS 50） · 通信工程</p>
                 </div>
             </div>
-        </div>
 
-        <!-- 工作经历 -->
-        <div class="section-card" id="experience">
             <h2 class="section-title">工作经历</h2>
 
             <div class="exp-item">
-                <div class="exp-header">
-                    <span class="exp-company">阿里云计算有限公司</span>
-                    <span class="exp-date">2026.07 - 至今</span>
-                </div>
+                <div class="exp-company">阿里云计算有限公司</div>
+                <div class="exp-date">2026.07 - 至今</div>
                 <div class="exp-role">AIOS 安全负责人</div>
                 <div class="exp-desc">
                     <ul>
@@ -505,14 +441,12 @@
             </div>
 
             <div class="exp-item">
-                <div class="exp-header">
-                    <span class="exp-company">南京维沃软件技术有限公司 (vivo)</span>
-                    <span class="exp-date">2021.08 - 2026.06</span>
-                </div>
+                <div class="exp-company">南京维沃软件技术有限公司 (vivo)</div>
+                <div class="exp-date">2021.08 - 2026.06</div>
                 <div class="exp-role">安全研究专家 / 端侧系统安全架构负责人</div>
                 <div class="exp-desc">
                     <ul>
-                        <li>端侧系统安全架构负责人：主导定义 vivo 设备端侧系统“千镜安全架构”，作为公司端侧业务的系统级安全架构基线，从芯片层、内核层、系统框架层、应用层到端云协同边界，明确安全边界、威胁模型与演进路线，覆盖并保护上亿台 vivo 终端设备及相关服务。</li>
+                        <li>端侧系统安全架构负责人：主导定义 vivo 设备端侧系统"千镜安全架构"，作为公司端侧业务的系统级安全架构基线，从芯片层、内核层、系统框架层、应用层到端云协同边界，明确安全边界、威胁模型与演进路线，覆盖并保护上亿台 vivo 终端设备及相关服务。</li>
                         <li>安全技术引入与架构决策：对拟引入的安全能力进行系统性评估与取舍，相关结论直接影响系统架构设计与业务产品技术路线选择。</li>
                         <li>重点覆盖身份与行为认证、系统与内核完整性、端侧虚拟化隔离、敏感数据保护、端云协同中的机密计算等关键安全边界。</li>
                         <li>AI &amp; On-device Intelligence Security：将 AI 视为端侧高权限执行与敏感数据处理的新计算单元，定义其系统级安全边界，重点关注模型执行环境安全、上下文与用户行为数据保护、隐私数据最小化暴露，为 AI 能力的安全部署提供架构级支持。</li>
@@ -523,10 +457,8 @@
             </div>
 
             <div class="exp-item">
-                <div class="exp-header">
-                    <span class="exp-company">华为技术有限公司</span>
-                    <span class="exp-date">2017.08 - 2021.07</span>
-                </div>
+                <div class="exp-company">华为技术有限公司</div>
+                <div class="exp-date">2017.08 - 2021.07</div>
                 <div class="exp-role">高级工程师</div>
                 <div class="exp-desc">
                     <ul>
@@ -538,10 +470,8 @@
             </div>
 
             <div class="exp-item">
-                <div class="exp-header">
-                    <span class="exp-company">意大利都灵理工大学</span>
-                    <span class="exp-date">2013.03 - 2017.07</span>
-                </div>
+                <div class="exp-company">意大利都灵理工大学</div>
+                <div class="exp-date">2013.03 - 2017.07</div>
                 <div class="exp-role">博士研究生，并担任硕士研究生导师</div>
                 <div class="exp-desc">
                     <ul>
@@ -550,63 +480,42 @@
                     </ul>
                 </div>
             </div>
-        </div>
 
-        <!-- 项目经历 -->
-        <div class="section-card" id="projects">
             <h2 class="section-title">重点项目</h2>
-            <div class="project-grid">
-                <div class="project-item">
-                    <div class="project-header">
-                        <span class="project-name">云侧机密计算研究项目</span>
-                    </div>
-                    <p class="project-desc">负责 vivo 公司内云端机密计算研究项目，支撑公司内私密计算云的能力，提升 vivo AIGC 业务在云端的用户数据隐私保护能力，增强相关业务的市场竞争力和业界口碑。</p>
-                </div>
-                <div class="project-item">
-                    <div class="project-header">
-                        <span class="project-name">手机侧虚拟化技术研究</span>
-                        <span class="project-date">2023.08 - 2025.06</span>
-                    </div>
-                    <p class="project-desc">主持手机端侧虚拟化技术研究，通过对安卓框架中的虚拟化框架和 SoC 平台虚拟化技术的研究，支撑 vivo 手机内关键业务的安全部署，提升业务自身安全性以及产品竞争力。</p>
-                </div>
-                <div class="project-item">
-                    <div class="project-header">
-                        <span class="project-name">vivo 复旦快应用小游戏恶意行为检测合作项目</span>
-                        <span class="project-date">2023.07 - 2024.06</span>
-                    </div>
-                    <p class="project-desc">主持 vivo 与复旦的快应用恶意行为检测合作项目，通过静态代码分析形成对应的检测规则，识别带有恶意行为的快应用，提升在 vivo 手机中运行的快应用安全性与产品价值。</p>
-                </div>
-                <div class="project-item">
-                    <div class="project-header">
-                        <span class="project-name">vivo 复旦框架服务层中的访问控制安全分析项目</span>
-                        <span class="project-date">2022.09 - 2023.02</span>
-                    </div>
-                    <p class="project-desc">主持 vivo 与复旦对 vivo 手机内框架服务层的代码分析，通过 CFG 的方式找寻框架服务层中可能存在的访问控制漏洞，提升 vivo 手机内代码安全性与产品安全口碑。</p>
-                </div>
-                <div class="project-item">
-                    <div class="project-header">
-                        <span class="project-name">vivo 武大基于用户行为的指纹认证增强技术合作项目</span>
-                        <span class="project-date">2021.11 - 2022.05</span>
-                    </div>
-                    <p class="project-desc">主持 vivo 与武汉大学的基于用户行为的指纹认证增强技术合作，利用用户指纹认证时的身体姿势或解锁模式差异，判断用户是否处于醉酒或不清醒状态，增强手机指纹认证准确性。</p>
-                </div>
-                <div class="project-item">
-                    <div class="project-header">
-                        <span class="project-name">vivo 公司内手机端侧智能体安全技术研究</span>
-                    </div>
-                    <p class="project-desc">主持 vivo 手机端侧智能体安全技术能力研究，开展端侧部署智能体的风险分析、安全需求分析和端侧所需安全技术能力识别，支持下一代 AI 手机的安全架构设计与能力实现，并在 CCF 大会宣讲安全技术研究方向，提升 vivo 在端侧智能体方向的行业影响力。</p>
-                </div>
-                <div class="project-item">
-                    <div class="project-header">
-                        <span class="project-name">vivo 手机端侧系统安全架构建设</span>
-                    </div>
-                    <p class="project-desc">主持 vivo 手机端侧系统安全架构建设，规划设计覆盖系统各层级的安全架构，预判威胁、制定防护策略；主持执行漏洞测试与风险评估，推动技术预研落地，联动业务制定安全目标，并输出专利、白皮书等成果，通过校企合作与行业分享扩大技术影响力。</p>
-                </div>
-            </div>
-        </div>
 
-        <!-- 论文与白皮书 -->
-        <div class="section-card" id="publications">
+            <div class="project-item">
+                <div class="project-name">云侧机密计算研究项目</div>
+                <p class="project-desc">负责 vivo 公司内云端机密计算研究项目，支撑公司内私密计算云的能力，提升 vivo AIGC 业务在云端的用户数据隐私保护能力，增强相关业务的市场竞争力和业界口碑。</p>
+            </div>
+            <div class="project-item">
+                <div class="project-name">手机侧虚拟化技术研究</div>
+                <div class="project-date">2023.08 - 2025.06</div>
+                <p class="project-desc">主持手机端侧虚拟化技术研究，通过对安卓框架中的虚拟化框架和 SoC 平台虚拟化技术的研究，支撑 vivo 手机内关键业务的安全部署，提升业务自身安全性以及产品竞争力。</p>
+            </div>
+            <div class="project-item">
+                <div class="project-name">vivo 复旦快应用小游戏恶意行为检测合作项目</div>
+                <div class="project-date">2023.07 - 2024.06</div>
+                <p class="project-desc">主持 vivo 与复旦的快应用恶意行为检测合作项目，通过静态代码分析形成对应的检测规则，识别带有恶意行为的快应用，提升在 vivo 手机中运行的快应用安全性与产品价值。</p>
+            </div>
+            <div class="project-item">
+                <div class="project-name">vivo 复旦框架服务层中的访问控制安全分析项目</div>
+                <div class="project-date">2022.09 - 2023.02</div>
+                <p class="project-desc">主持 vivo 与复旦对 vivo 手机内框架服务层的代码分析，通过 CFG 的方式找寻框架服务层中可能存在的访问控制漏洞，提升 vivo 手机内代码安全性与产品安全口碑。</p>
+            </div>
+            <div class="project-item">
+                <div class="project-name">vivo 武大基于用户行为的指纹认证增强技术合作项目</div>
+                <div class="project-date">2021.11 - 2022.05</div>
+                <p class="project-desc">主持 vivo 与武汉大学的基于用户行为的指纹认证增强技术合作，利用用户指纹认证时的身体姿势或解锁模式差异，判断用户是否处于醉酒或不清醒状态，增强手机指纹认证准确性。</p>
+            </div>
+            <div class="project-item">
+                <div class="project-name">vivo 公司内手机端侧智能体安全技术研究</div>
+                <p class="project-desc">主持 vivo 手机端侧智能体安全技术能力研究，开展端侧部署智能体的风险分析、安全需求分析和端侧所需安全技术能力识别，支持下一代 AI 手机的安全架构设计与能力实现，并在 CCF 大会宣讲安全技术研究方向，提升 vivo 在端侧智能体方向的行业影响力。</p>
+            </div>
+            <div class="project-item">
+                <div class="project-name">vivo 手机端侧系统安全架构建设</div>
+                <p class="project-desc">主持 vivo 手机端侧系统安全架构建设，规划设计覆盖系统各层级的安全架构，预判威胁、制定防护策略；主持执行漏洞测试与风险评估，推动技术预研落地，联动业务制定安全目标，并输出专利、白皮书等成果，通过校企合作与行业分享扩大技术影响力。</p>
+            </div>
+
             <h2 class="section-title">发表主要论文与成果</h2>
             <ul class="pub-list">
                 <li class="pub-item">
@@ -657,12 +566,12 @@
                 <li class="pub-item">
                     <span class="pub-badge">论文</span>
                     <div class="pub-title">Android apps risk evaluation: a methodology</div>
-                    <div class="pub-meta">Andrea Atzeni, Tao Su, Madalina Baltatu, Rosalia D’Alessandro, and Giovanni Pessiva. ICST Transactions on Ubiquitous Environments, 1(4):1–18, 2015.</div>
+                    <div class="pub-meta">Andrea Atzeni, Tao Su, Madalina Baltatu, Rosalia D'Alessandro, and Giovanni Pessiva. ICST Transactions on Ubiquitous Environments, 1(4):1–18, 2015.</div>
                 </li>
                 <li class="pub-item">
                     <span class="pub-badge">论文</span>
                     <div class="pub-title">How Dangerous is Your Android App? An Evaluation Methodology</div>
-                    <div class="pub-meta">Andrea Atzeni, Tao Su, Madalina Baltatu, Rosalia D’Alessandro, and Giovanni Pessiva. 11th International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services, pp. 130–139, ICST, 2014.</div>
+                    <div class="pub-meta">Andrea Atzeni, Tao Su, Madalina Baltatu, Rosalia D'Alessandro, and Giovanni Pessiva. 11th International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services, pp. 130–139, ICST, 2014.</div>
                 </li>
                 <li class="pub-item">
                     <span class="pub-badge">论文</span>
@@ -685,23 +594,22 @@
                     <div class="pub-meta">Roberto Bonafiglia, Francesco Ciaccia, Antonio Lioy, Mario Nemirovsky, Fulvio Giovanni Ottavio Risso, and Tao Su. NetSoft 2015: 1st IEEE Conference on Network Softwarization, pp. 1–2, IEEE, 2015.</div>
                 </li>
             </ul>
-            <p style="margin-top: 20px; color: #666; font-size: 0.9em;">
-                共发表十余篇国际会议/期刊论文（Android 安全、可信计算、分布式系统安全），申请专利二十余篇。
-            </p>
-        </div>
+            <p style="margin-top: 20px; color: #666; font-size: 0.95em;">共发表十余篇国际会议/期刊论文（Android 安全、可信计算、分布式系统安全），申请专利二十余篇。</p>
 
-        <!-- 个人爱好及自我认知 -->
-        <div class="section-card" id="self-evaluation">
             <h2 class="section-title">个人爱好及自我认知</h2>
             <ul class="self-list">
                 <li>性格和善，能包容他人，耐心真诚。</li>
                 <li>诚实守信，勤奋努力，做事踏实专一，有责任心，积极上进，勇于创新，学习动手能力突出。</li>
                 <li>具备良好的写作能力和团队合作精神，对新鲜事物具有浓厚兴趣，并持续关注网络安全、移动系统安全与 AI 安全领域动态。</li>
             </ul>
+        </article>
+
+        <div class="back-link">
+            <a href="index.html">← 返回首页</a>
         </div>
 
         <footer>
-            <p>&copy; 2026 苏涛. 保留所有权利。</p>
+            <p>&copy; 2026 苏涛的博客. All rights reserved.</p>
         </footer>
     </div>
 </body>
